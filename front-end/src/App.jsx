@@ -3,9 +3,11 @@ import './App.css';
 
 function App() {
   return (
-    <>
-      Hello
-    </>
+    <div id="phone-wrapper">
+      <div id="app">
+        Hello
+      </div>
+    </div>
   );
 }
 
