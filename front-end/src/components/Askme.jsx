@@ -3,6 +3,11 @@ import PropTypes from 'prop-types';
 
 export default function Askme({ question, setQuestion }) {
   const [input, setInput] = React.useState('');
+
+  const handleOnClick = () => {
+    setQuestion([...question, input]);
+    setInput('');
+  };
   return (
     <div id="question-component">
       <div id="question-title">
@@ -20,10 +25,9 @@ export default function Askme({ question, setQuestion }) {
       </div>
       <div id="question-button-div">
         <button
-          onClick={ () => setQuestion([...question, input]) }
+          onClick={ handleOnClick }
         >
           Enviar
-
         </button>
       </div>
     </div>
