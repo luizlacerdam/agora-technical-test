@@ -28,5 +28,5 @@ Inicie o servidor
 
 ## Demonstração
 
-![gif de demonstração](agora.gif)
+![gif de demonstração](./agora.gif)
 
