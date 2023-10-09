@@ -1,5 +1,8 @@
 * {
     font-family: sans-serif;
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
 }
 
 /* Cellphone layout */
@@ -35,7 +38,7 @@
     border-radius: 8px;
     border: 2px solid #878A8C;
     background-color: #878A8C;
-   
+    position: relative;
 }
 
 #question-title {
@@ -43,12 +46,12 @@
     width: 323px;
     background-color: #292D32;
     border-radius: 8px;
-    
-    left: 0px;
-    top: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    left: -2px;
+    top: -2px;
 }
 
 #question-title > span {

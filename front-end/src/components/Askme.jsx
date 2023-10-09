@@ -1,6 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function Askme() {
+export default function Askme({ question, setQuestion }) {
+  const [input, setInput] = React.useState('');
   return (
     <div id="question-component">
       <div id="question-title">
@@ -9,11 +11,26 @@ export default function Askme() {
         </span>
       </div>
       <div id="question-input-div">
-        <input type="text" placeholder="Envie uma pergunta" />
+        <input
+          type="text"
+          placeholder="Envie uma pergunta"
+          value={ input }
+          onChange={ (e) => setInput(e.target.value) }
+        />
       </div>
       <div id="question-button-div">
-        <button>Enviar</button>
+        <button
+          onClick={ () => setQuestion([...question, input]) }
+        >
+          Enviar
+
+        </button>
       </div>
     </div>
   );
 }
+
+Askme.propTypes = {
+  question: PropTypes.arrayOf(PropTypes.string).isRequired,
+  setQuestion: PropTypes.func.isRequired,
+};
